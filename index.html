@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Breakout game</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background-color: #eee;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <canvas id="myCanvas" width="480" height="320"> </canvas>
+    <script>
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.rect(20, 40, 50, 50);
+      ctx.fillStyle = "#FF0000";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
+      ctx.fillStyle = "green";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.rect(160, 10, 100, 40);
+      ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+      ctx.stroke();
+      ctx.closePath();
+    </script>
+  </body>
+</html>
